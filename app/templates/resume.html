@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Kaplan | Resume</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #34495e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        /* Active navigation item */
+        nav li.active a {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+        
+        .resume-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #34495e;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+        }
+        
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .resume-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-header p {
+            color: #3498db;
+            font-size: 1.1rem;
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .download-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+        
+        .item-subtitle {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-details {
+            padding-left: 1.5rem;
+        }
+        
+        .item-details li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .skills-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .skills-category {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-list {
+            list-style-type: none;
+        }
+        
+        .skills-list li {
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+        
+        .skills-list li::before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .resume-content {
+                padding: 2rem;
+            }
+            
+            nav li {
+                margin: 0 10px;
+            }
+            
+            .item-header, .section-header {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Isaac Kaplan</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li class="active"><a href="resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="resume-content">
+            <div class="resume-header">
+                <h1>Isaac Kaplan</h1>
+            </div>
+            
+            <div class="download-buttons">
+                <a href="{{ url_for('static', filename='documents/resume - Isaac Kaplan.pdf') }}" download class="download-btn">
+                    <i class="fas fa-download"></i> Resume
+                </a>
+                <a href="{{ url_for('static', filename='documents/unofficial_academic_record - Isaac Kaplan.pdf') }}" download class="download-btn">
+                    <i class="fas fa-download"></i> Unofficial Academic Record
+                </a>
+            </div>
+            
+            <div class="section">
+                <h2>Education</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Carnegie Mellon University | Pittsburgh, PA</span>
+                    </div>
+                    <p class="item-subtitle">Expected Graduation Date: May 2026</p>
+                    <ul class="item-details">
+                        <li>Bachelor's of Science: Mechanical Engineering</li>
+                        <li>Bachelor's of Science: Computer Science</li>
+                        <li>GPA: 3.61/4.0</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Experience</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">SURA Researcher | Carnegie Mellon University (Legged Systems Group)</span>
+                        <span>Summer 2024</span>
+                    </div>
+                    <p class="item-subtitle">Pittsburgh, PA</p>
+                    <ul class="item-details">
+                        <li>Developed an MLP Neural Network to make path predictions for a robotic prosthetic leg</li>
+                        <li>Modified and improved upon the control code for the leg to run with the AI system</li>
+                    </ul>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Software Development Intern | Software-Development-Experts</span>
+                        <span>Summer 2023</span>
+                    </div>
+                    <p class="item-subtitle">Boulder, CO</p>
+                    <ul class="item-details">
+                        <li>Developed data processing software to scrape from an API and process it to extract and reformat information</li>
+                        <li>Set up an auto-deploying website's infrastructure using Jenkins, Docker, and Kubernetes</li>
+                    </ul>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Carnegie Mellon Rocket Command</span>
+                        <span>Fall 2022 – Fall 2023</span>
+                    </div>
+                    <ul class="item-details">
+                        <li>Programmed a Raspberry Pi to receive and decode radio broadcasts then move servos and take photos based on the contents of the transmission</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Projects</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Space Hanger Project | Mechanical Design</span>
+                        <span>Fall 2023</span>
+                    </div>
+                    <ul class="item-details">
+                        <li>Designed a member out of acrylic to withstand a 50 lb load and thermal expansion</li>
+                        <li>Minimized the mass to 3.7 grams which successfully held 50 lb</li>
+                        <li>Iterated design and testing using Solidworks simulation and experimentation</li>
+                    </ul>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Hack-112 | Computer Science</span>
+                        <span>Spring 2023</span>
+                    </div>
+                    <ul class="item-details">
+                        <li>Competed in a hackathon, made a 3D world generation game with ambient and directional light to win 1st place</li>
+                    </ul>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Mobot Project | Mechatronics</span>
+                        <span>Fall 2022</span>
+                    </div>
+                    <ul class="item-details">
+                        <li>Wrote C++ for an Arduino-based mobot to follow a path using color sensors and stop at a distance from a wall</li>
+                        <li>Won first place for my robot finishing the course the fastest in the class</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Leadership Experience</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Teaching Assistant for Fundamentals of Programming (15-112)</span>
+                        <span>Fall 2023 - Present</span>
+                    </div>
+                    <p class="item-subtitle">Carnegie Mellon University</p>
+                    <ul class="item-details">
+                        <li>Taught recitation twice a week as well as mentoring 11 students through making a ~1000 line project from scratch</li>
+                    </ul>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Resident Advisor</span>
+                        <span>Fall 2023</span>
+                    </div>
+                    <p class="item-subtitle">Carnegie Mellon University</p>
+                    <ul class="item-details">
+                        <li>Planned large events for my housing community and used conflict resolution and mediation skills to resolve disagreements between residents</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <p class="skills-category">Mechanical Engineer Skills:</p>
+                        <ul class="skills-list">
+                            <li>CAD</li>
+                            <li>Matlab</li>
+                            <li>Excel</li>
+                            <li>Laser cutting</li>
+                            <li>3D printing</li>
+                            <li>FEA</li>
+                            <li>Ansys Discovery</li>
+                            <li>Arduino</li>
+                            <li>Raspberry Pi</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <p class="skills-category">Computer Science Skills:</p>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>SML</li>
+                            <li>VBA</li>
+                            <li>Pytorch</li>
+                            <li>Computer Systems</li>
+                            <li>OOP</li>
+                            <li>Imperative Programming</li>
+                            <li>Functional Programming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Isaac Kaplan. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
