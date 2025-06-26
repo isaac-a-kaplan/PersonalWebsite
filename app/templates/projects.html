@@ -59,6 +59,7 @@
     <div class="container">
         <div class="projects-content">
             <h2>Professional Projects</h2>
+
             <div class="project">
                 <h3 class="project-title">Leg Prosthetic AI Enhancement</h3>
                 <p class="location">Legged Systems Group - Carnegie Mellon</p>
@@ -83,13 +84,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- School Projects -->
-    <div class="container">
-        <div class="projects-content">
-            <h2>School Projects</h2>
             <div class="project">
                 <h3 class="project-title">VLM Lower Level Control Based Robot</h3>
                 <p class="location">CRAI Lab - Kent State University</p>
@@ -100,32 +95,149 @@
                     a robot. The robot was then tested on spatial and complex tasks...
                 </p>
                 <p class="project-technologies">Technologies: Python, ROS, C++, OpenAI</p>
-                <div class="project-media">
+                <p class="project-description">Images and videos coming soon...</p>
+                <!-- <div class="project-media">
                     <div class="media-item">
-                        <img src="images/robot-control.jpg" alt="Robot control interface" class="project-image">
+                        <img src="{{ url_for('static', filename='images/Robot_and_dog.jpg') }}" alt="Robot image" class="project-image">
                         <p class="media-caption">Robot control interface showing spatial awareness</p>
                     </div>
                     <div class="media-item">
                         <img src="images/robot-hardware.jpg" alt="Robot hardware setup" class="project-image">
-                        <p class="media-caption">Hardware setup for the VLM-controlled robot</p>
+                        <p class="media-caption">Image coming soon</p>
                     </div>
                     <div class="media-item">
                         <video controls class="project-video">
                             <source src="videos/robot-demo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="media-caption">Demonstration of the robot performing complex tasks</p>
+                        <p class="media-caption">Video coming soon</p>
                     </div>
-                </div>
+                </div> -->
             </div>
+
         </div>
     </div>
 
-    <!-- Personal Projects -->
+    <!-- Extracurricular Projects -->
     <div class="container">
         <div class="projects-content">
-            <h2>Personal Projects</h2>
-            <p>Coming soon...</p>
+            <h2>Extracurricular Projects</h2>
+            
+            <div class="project">
+                <h3 class="project-title">Student Launch Initiative (SLI)</h3>
+                <p class="location">Carnegie Mellon Rocket Command</p>
+                <p class="project-date">Fall 2022 - Spring 2023</p>
+                <p class="project-description">
+                    Programmed a radio and motors as part of a payload with a Raspberry Pi
+                    to listen for radio commands to be given by NASA after rocket landing.
+                </p>
+                <p class="project-technologies">Technologies: Raspberry Pi, Python</p>
+                <div class="project-media">
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Rocket_preperation.jpeg') }}" alt="Rocket Preperation" class="project-image">
+                        <p class="media-caption">Preparing the rocket at the launch site.</p>
+                    </div>
+
+                    <div class="media-item">
+                        <video controls class="project-video">
+                            <source src="{{ url_for('static', filename='videos/Payload_extension.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="media-caption">Payload extension test and radio signal test.</p>
+                    </div>
+
+                    <div class="media-item">
+                        <video controls class="project-video">
+                            <source src="{{ url_for('static', filename='videos/Rocket_ejection_test.mov') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="media-caption">Testing the ejection charges on the rocket.</p>
+                    </div>
+
+                    <div class="media-item">
+                        <video controls class="project-video">
+                            <source src="{{ url_for('static', filename='videos/Rocket_launch.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="media-caption">The rocket launching on competition day.</p>
+                    </div>
+
+                    <div class="media-item">
+                        <video controls class="project-video">
+                            <source src="{{ url_for('static', filename='videos/Rocket_pov.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="media-caption">The rocket's perspective of the launch on competition day.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- School Projects -->
+    <div class="container">
+        <div class="projects-content">
+            <h2>School Projects</h2>
+            
+            <div class="project">
+                <h3 class="project-title">Chair Design Proect</h3>
+                <p class="location">Mechanics II: 3D Design (24-262)</p>
+                <p class="project-date">Spring 2024</p>
+                <p class="project-description">
+                    Tasked to design a chair minimmizing cost and making maximizing comfort and
+                    "bear resistance". Used computer aided design and a variety of manufacturing
+                    tecniques to construct a chair that sucessfully held the weight of many
+                    students and the professor.
+                </p>
+                <p class="project-technologies">Technologies: CAD (solidworks), 3D printing</p>
+                <div class="project-media">
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Chair_design.jpg') }}" alt="Chair Drawing" class="project-image">
+                        <p class="media-caption">An initial drawing prototype of the chair</p>
+                    </div>
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Chair.jpg') }}" alt="Constructed Chair" class="project-image">
+                        <p class="media-caption">The contructed chair</p>
+                    </div>
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Chair_frangel.jpg') }}" alt="Student in Chair" class="project-image">
+                        <p class="media-caption">A fellow student sitting in the chair.</p>
+                    </div>
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Chair_professor.jpg') }}" alt="Professor in Chair" class="project-image">
+                        <p class="media-caption">The professor sitting in the chair.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3 class="project-title">Bycicle Crank Breaking Point Design</h3>
+                <p class="location">Mechanics II: 3D Design (24-262)</p>
+                <p class="project-date">Spring 2024</p>
+                <p class="project-description">
+                    Designed a memeber to be installed as a bycicle crank to break at
+                    A force of 12 Newtons to prevent lower limb injuries during
+                    intense breaking manuvers. A hybrid material approach was taken
+                    to allow for the fast design iteration, testing, and reuse of parts.
+                    For the real world application, after breaking, only the acrylic bar slot
+                    would have to be replaced, and the force at which it would break could
+                    be selected by the consumer.
+                </p>
+                <p class="project-technologies">Technologies: CAD (solidworks), 3D printing </p>
+                <div class="project-media">
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Von_Mises_stress.png') }}" alt="Von Mises Stress of Initial Design" class="project-image">
+                        <p class="media-caption">The initial design of the hybrid material member.</p>
+                    </div>
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/Mass_reduced.png') }}" alt="Constructed Chair" class="project-image">
+                        <p class="media-caption">The mass reduced version of the hyrbrid material member.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
