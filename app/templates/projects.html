@@ -61,6 +61,37 @@
             <h2>Professional Projects</h2>
 
             <div class="project">
+                <h3 class="project-title">Fine-tuning Multimodal Model for Lower Level Robotic Control</h3>
+                <p class="location">CRAI Lab - Kent State University</p>
+                <p class="project-date">Summer 2025</p>
+                <p class="project-description">
+                    Fine-tuned GPT-4o using a home-brewed process to teach the language
+                    and visual components of the model spatial awareness and control of
+                    a robot. Contructed the robot and created control code to interface
+                    with the model.
+
+                </p>
+                <p class="project-technologies">Technologies: Python, ROS, C++, OpenAI</p>
+                <div class="project-media">
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/poster.jpg') }}" alt="Poster" class="project-image">
+                        <p class="media-caption">Poster presented at the end of the research program</p>
+                    </div>
+                    <div class="media-item">
+                        <img src="{{ url_for('static', filename='images/robot.jpg') }}" alt="Robot Used" class="project-image">
+                        <p class="media-caption">An image of the robot built to test the methodology</p>
+                    </div>
+                    <div class="media-item">
+                        <video controls class="project-video">
+                            <source src="{{ url_for('static', filename='videos/data_collection.MOV') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="media-caption">The robot collecting training data autonomously</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
                 <h3 class="project-title">Leg Prosthetic AI Enhancement</h3>
                 <p class="location">Legged Systems Group - Carnegie Mellon</p>
                 <p class="project-date">Summer 2024</p>
@@ -85,35 +116,7 @@
                 </div>
             </div>
 
-            <div class="project">
-                <h3 class="project-title">VLM Lower Level Control Based Robot</h3>
-                <p class="location">CRAI Lab - Kent State University</p>
-                <p class="project-date">Summer 2025</p>
-                <p class="project-description">
-                    Fine-tuned GPT-4o using a home-brewed process to teach the language
-                    and visual components of the model spatial awareness and control of
-                    a robot. The robot was then tested on spatial and complex tasks...
-                </p>
-                <p class="project-technologies">Technologies: Python, ROS, C++, OpenAI</p>
-                <p class="project-description">Images and videos coming soon...</p>
-                <!-- <div class="project-media">
-                    <div class="media-item">
-                        <img src="{{ url_for('static', filename='images/Robot_and_dog.jpg') }}" alt="Robot image" class="project-image">
-                        <p class="media-caption">Robot control interface showing spatial awareness</p>
-                    </div>
-                    <div class="media-item">
-                        <img src="images/robot-hardware.jpg" alt="Robot hardware setup" class="project-image">
-                        <p class="media-caption">Image coming soon</p>
-                    </div>
-                    <div class="media-item">
-                        <video controls class="project-video">
-                            <source src="videos/robot-demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="media-caption">Video coming soon</p>
-                    </div>
-                </div> -->
-            </div>
+            
 
         </div>
     </div>
